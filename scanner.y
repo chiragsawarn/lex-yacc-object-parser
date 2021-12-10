@@ -2,6 +2,7 @@
     void yyerror(char *s);
     int yylex();
     #include <stdio.h>
+    #include <stdlib.h>
 %}
 
 
@@ -43,12 +44,15 @@ result: '{'
 %%
 
 int main(int argc,char** argv){
-    int accepted = yyparse();
+    int accepted;
+    accepted = yyparse();
     if(accepted == 0){
-        printf("File is in accepted format!\n");
+        printf("Congratulations! File is in accepted format!\n");
+    }else{
+        printf("Oops! File is NOT in accepted format!\n");
     }
 }
 
 void yyerror(char *s){
-    fprintf(stderr,"Error:%s.\n",s);
+    // fprintf(stderr,"Error:%s.\n",s);
 }

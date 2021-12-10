@@ -73,10 +73,11 @@
     void yyerror(char *s);
     int yylex();
     #include <stdio.h>
+    #include <stdlib.h>
 
 
 /* Line 189 of yacc.c  */
-#line 80 "y.tab.c"
+#line 81 "y.tab.c"
 
 /* Enabling traces.  */
 #ifndef YYDEBUG
@@ -156,7 +157,7 @@ typedef int YYSTYPE;
 
 
 /* Line 264 of yacc.c  */
-#line 160 "y.tab.c"
+#line 161 "y.tab.c"
 
 #ifdef short
 # undef short
@@ -450,8 +451,8 @@ static const yytype_int8 yyrhs[] =
 /* YYRLINE[YYN] -- source line where rule number YYN was defined.  */
 static const yytype_uint8 yyrline[] =
 {
-       0,    13,    13,    15,    16,    16,    17,    24,    25,    25,
-      26,    35,    36,    36,    37
+       0,    14,    14,    16,    17,    17,    18,    25,    26,    26,
+      27,    36,    37,    37,    38
 };
 #endif
 
@@ -1401,7 +1402,7 @@ yyreduce:
       
 
 /* Line 1455 of yacc.c  */
-#line 1405 "y.tab.c"
+#line 1406 "y.tab.c"
       default: break;
     }
   YY_SYMBOL_PRINT ("-> $$ =", yyr1[yyn], &yyval, &yyloc);
@@ -1613,16 +1614,19 @@ yyreturn:
 
 
 /* Line 1675 of yacc.c  */
-#line 43 "scanner.y"
+#line 44 "scanner.y"
 
 
 int main(int argc,char** argv){
-    int accepted = yyparse();
+    int accepted;
+    accepted = yyparse();
     if(accepted == 0){
-        printf("File is in accepted format!\n");
+        printf("Congratulations! File is in accepted format!\n");
+    }else{
+        printf("Oops! File is NOT in accepted format!\n");
     }
 }
 
 void yyerror(char *s){
-    fprintf(stderr,"Error:%s.\n",s);
+    // fprintf(stderr,"Error:%s.\n",s);
 }
