@@ -6,41 +6,24 @@
 %}
 
 
-%token ALLELE_1 ALLELE_2 CHROM FATHER_ID RESULTS ID ILLNESS MARKER MARKERS MOTHER_ID NAME POSITION SAMPLE SAMPLES
+%token ID MATHS ENGLISH PHYSICS CHEMISTRY GRADES
+%token A B C D E
 %token BOOLEAN INTEGER STRING
 %start linkage
 %%
 
-linkage: '{' markers ','  samples ',' results '}' ;
+linkage: '{' grades '}' ;
 
-markers: MARKERS ':' '[' marker_list ']';
-marker_list: marker | marker_list ',' marker ;
-marker: '{'
+grades: GRADES ':' '[' grade_list ']';
+grade_list: grade | grade_list ',' grade ;
+grade: '{'
          ID ':' INTEGER ','
-         NAME ':' STRING ','
-         CHROM ':' STRING ','
-         POSITION ':' INTEGER
+         MATHS ':' symbol ','
+         ENGLISH ':' symbol ','
+         PHYSICS ':' symbol ','
+         CHEMISTRY ':' symbol
         '}';
-
-samples: SAMPLES ':' '[' sample_list ']';
-sample_list: sample | sample_list ',' sample ;
-sample: '{'
-         ID ':' INTEGER ','
-         NAME ':' STRING ','
-         FATHER_ID ':' INTEGER ','
-         MOTHER_ID ':' INTEGER ','
-         ILLNESS ':' BOOLEAN
-        '}';
-
-
-results: RESULTS ':' '[' result_list ']';
-result_list: result | result_list ',' result;
-result: '{'
-         SAMPLE ':' INTEGER ','
-         MARKER ':' INTEGER ','
-         ALLELE_1 ':' STRING ','
-         ALLELE_2 ':' STRING
-        '}';
+symbol: A | B | C | D | E;
 %%
 
 int main(int argc,char** argv){

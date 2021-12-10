@@ -6,26 +6,21 @@
 %}
 
 %%
-"\"allele-1\""      return ALLELE_1;
-"\"allele-2\""      return ALLELE_2;
-"\"chrom\"" return CHROM;
-"\"father-id\"" return FATHER_ID;
-"\"mother-id\"" return MOTHER_ID;
-"\"id\""    return ID;
-"\"markers\""       return MARKERS;
-"\"marker\""        return MARKER;
-"\"illness\""       return ILLNESS;
-"\"results\"" return RESULTS;
-"\"name\""  return NAME;
-"\"position\""      return POSITION;
-"\"samples\""       return SAMPLES;
-"\"sample\""        return SAMPLE;
-true            return BOOLEAN;
-false           return BOOLEAN;
-[0-9]+          return INTEGER;
-\"[^\"]*\"       return STRING;
-[ \n\t\r]       ;/* ignore */
-.               return yytext[0];
+"\"grades\""        return GRADES;
+"\"A\""             return A;
+"\"B\""             return B;
+"\"C\""             return C;
+"\"D\""             return D;
+"\"E\""             return E;
+"\"student_id\""    return ID;
+"\"maths\""         return MATHS;
+"\"english\""       return ENGLISH;
+"\"physics\""       return PHYSICS;
+"\"chemistry\""     return CHEMISTRY;
+[0-9]+              return INTEGER;
+\"[^\"]*\"          return STRING;
+[ \n\t\r]           ;/* ignore */
+.                   return yytext[0];
 %%
 
 int yywrap(){

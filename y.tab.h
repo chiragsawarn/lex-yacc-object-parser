@@ -39,43 +39,37 @@
    /* Put the tokens into the symbol table, so that GDB and other debuggers
       know about them.  */
    enum yytokentype {
-     ALLELE_1 = 258,
-     ALLELE_2 = 259,
-     CHROM = 260,
-     FATHER_ID = 261,
-     RESULTS = 262,
-     ID = 263,
-     ILLNESS = 264,
-     MARKER = 265,
-     MARKERS = 266,
-     MOTHER_ID = 267,
-     NAME = 268,
-     POSITION = 269,
-     SAMPLE = 270,
-     SAMPLES = 271,
-     BOOLEAN = 272,
-     INTEGER = 273,
-     STRING = 274
+     ID = 258,
+     MATHS = 259,
+     ENGLISH = 260,
+     PHYSICS = 261,
+     CHEMISTRY = 262,
+     GRADES = 263,
+     A = 264,
+     B = 265,
+     C = 266,
+     D = 267,
+     E = 268,
+     BOOLEAN = 269,
+     INTEGER = 270,
+     STRING = 271
    };
 #endif
 /* Tokens.  */
-#define ALLELE_1 258
-#define ALLELE_2 259
-#define CHROM 260
-#define FATHER_ID 261
-#define RESULTS 262
-#define ID 263
-#define ILLNESS 264
-#define MARKER 265
-#define MARKERS 266
-#define MOTHER_ID 267
-#define NAME 268
-#define POSITION 269
-#define SAMPLE 270
-#define SAMPLES 271
-#define BOOLEAN 272
-#define INTEGER 273
-#define STRING 274
+#define ID 258
+#define MATHS 259
+#define ENGLISH 260
+#define PHYSICS 261
+#define CHEMISTRY 262
+#define GRADES 263
+#define A 264
+#define B 265
+#define C 266
+#define D 267
+#define E 268
+#define BOOLEAN 269
+#define INTEGER 270
+#define STRING 271
 
 
 

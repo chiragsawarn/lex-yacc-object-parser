@@ -1,27 +1,25 @@
 {
-    "markers": [
+    "grades": [
         {
-            "id": 1,
-            "name": "sore throat",
-            "chrom": "type1",
-            "position": 1
-        }
-    ],
-    "samples": [
+            "student_id": 1,
+            "maths": "A",
+            "english": "B",
+            "physics": "A",
+            "chemistry": "C"
+        },
         {
-            "id": 1,
-            "name": "Angad",
-            "father-id": 2,
-            "mother-id": 3,
-            "illness": true
-        }
-    ],
-    "results": [
+            "student_id": 2,
+            "maths": "B",
+            "english": "A",
+            "physics": "A",
+            "chemistry": "A"
+        },
         {
-            "sample": 1,
-            "marker": 1,
-            "allele-1": "A",
-            "allele-2": "T"
+            "student_id": 3,
+            "maths": "B",
+            "english": "B",
+            "physics": "A",
+            "chemistry": "A"
         }
     ]
 }
