@@ -43,7 +43,10 @@ result: '{'
 %%
 
 int main(int argc,char** argv){
-    yyparse();
+    int accepted = yyparse();
+    if(accepted == 0){
+        printf("File is in accepted format!\n");
+    }
 }
 
 void yyerror(char *s){

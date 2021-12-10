@@ -1616,9 +1616,11 @@ yyreturn:
 #line 43 "scanner.y"
 
 
-int main(int argc,char** argv)
-{
-    yyparse();
+int main(int argc,char** argv){
+    int accepted = yyparse();
+    if(accepted == 0){
+        printf("File is in accepted format!\n");
+    }
 }
 
 void yyerror(char *s){
